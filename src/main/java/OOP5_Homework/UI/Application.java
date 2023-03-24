@@ -18,11 +18,9 @@ public class Application {
         Model model = new Model(phoneBook, db);
         View view = new Console(scan);
         Presenter presenter = new Presenter(model, view);
-
         presenter.load();
         presenter.mainMenu();
         presenter.save();
-
         scan.close();
     }
 }

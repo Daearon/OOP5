@@ -77,23 +77,21 @@ public class Presenter {
         Contacts contact = makeContact(data);
         if (contact != null) {
             this.model.getPhoneBook().create(contact);
-            view.sucessAddContact();
+            view.successAddContact();
         }
     }
 
     private void editContact(String[] data) {
         String name = data[0];
         if (!this.model.getPhoneBook().readAll().containsKey(name)) {
-            if (!view.askAddNewContact()) {
-                return;
-            } else {
+            if (view.askAddNewContact()) {
                 addContact(data);
-                return;
             }
+            return;
         }
         Contacts contact = makeContact(data);
         this.model.getPhoneBook().modify(contact);
-        view.sucessEditContact();
+        view.successEditContact();
     }
 
     private void removeContact(String name) {
@@ -102,10 +100,9 @@ public class Presenter {
             view.noContactFound();
             return;
         }
-
         if (view.removeContactAccept(contact)) {
             this.model.getPhoneBook().delete(name);
-            view.sucessRemovedContact();
+            view.successRemovedContact();
         }
     }
 

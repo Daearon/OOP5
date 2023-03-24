@@ -106,17 +106,17 @@ public class Console implements View {
     }
 
     @Override
-    public void sucessAddContact() {
+    public void successAddContact() {
         System.out.println(Message.successAddMsg);
     }
 
     @Override
-    public void sucessEditContact() {
+    public void successEditContact() {
         System.out.println(Message.successAddMsg);
     }
 
     @Override
-    public void sucessRemovedContact() {
+    public void successRemovedContact() {
         System.out.println(Message.successRemovedMsg);
     }
 

@@ -5,10 +5,6 @@ import java.util.Map;
 public class PhoneBookMap implements PhoneBook {
     private Map<String,Contacts> contacts;
 
-    public PhoneBookMap(Map<String,Contacts> contacts) {
-        this.contacts = contacts;
-    }
-
     public PhoneBookMap() {
         this.contacts = new HashMap<>();
     }
@@ -28,14 +24,6 @@ public class PhoneBookMap implements PhoneBook {
     @Override
     public void create(Contacts contact) {
         this.setContact(contact);
-    }
-
-    @Override
-    public Contacts read(String name) {
-        if (this.getContacts().containsKey(name)) {
-            return this.getContacts().get(name);
-        }
-        return null;
     }
 
     @Override

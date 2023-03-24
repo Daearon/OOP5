@@ -11,17 +11,8 @@ public class Model {
         this.db = db;
     }
 
-    public Model(ExternalData db) {
-        this.db = db;
-        this.db.load();
-    }
-
     public PhoneBook getPhoneBook() {
         return this.phoneBook;
-    }
-
-    public ExternalData getDb() {
-        return this.db;
     }
 
     public void load() {

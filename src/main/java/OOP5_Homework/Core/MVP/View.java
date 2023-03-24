@@ -32,11 +32,11 @@ public interface View {
 
     void noContactFound();
 
-    void sucessAddContact();
+    void successAddContact();
 
-    void sucessEditContact();
+    void successEditContact();
 
-    void sucessRemovedContact();
+    void successRemovedContact();
 
     boolean askAddNewContact();
 
